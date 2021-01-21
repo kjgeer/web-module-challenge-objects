@@ -16,6 +16,8 @@ The function should:
 */
 
 function createMenuItem(name, price, category){
+  const menu ={name, price, category};
+  return menu;
 
 }
 
@@ -28,7 +30,11 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+    console.log(createMenuItem('hotdog', '$2.50', 'Dinner'));
 
+    console.log(createMenuItem('pizza', '$3', 'Lunch'));
+
+    console.log(createMenuItem('pancakes', '$5', 'breakfast'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -48,7 +54,14 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(string){
+    if (string === 'teacher' || 'student'){
+      return this.price = this.price*.75;
+    }else {
+      return this.price == this.price*.9;
+    }
+    
+  }
 }
 
 
@@ -69,9 +82,9 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+const juliusReview = reviews[5]['feedback'];
 
-
-
+console.log(juliusReview);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following: (no function needed) 
@@ -79,7 +92,9 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+reviews.push({name:'Kelsey', rating: 4, feedback: 'Really good food!'});
 
+console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
