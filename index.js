@@ -102,9 +102,12 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+const changeReview = function(array, index, key, string){
+  array[index][key] = string;
+  return array;
+}
 
-
-
+console.log(changeReview(reviews, 7, 'feedback', "this place is chill with really cool people, great for getting work done on weekdays"));    
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -116,12 +119,12 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
+function getReviewByIndex(array, num) {
+ 
+  return (`${array[num].name} gave the restaurant a ${array[num].rating} star review, and their feedback was: ${array[num].feedback}`);
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
 }
-
-
+  
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -135,12 +138,10 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
-
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  
+  return (`${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`);
 } 
-
-
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
